@@ -1,0 +1,23 @@
+<p>
+  <strong>Name:</strong>
+  <%= @drink.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @drink.kind_of_drink %>
+</p>
+
+<p>
+  <strong>Roast:</strong>
+  <%= @drink.roast %>
+</p>
+
+<p>
+  <strong>Flavor:</strong>
+  <%= @drink.flavor %>
+</p>
+
+<%= link_to 'Back', drinks_path %> | <%= link_to 'Edit', edit_drink_path(@drink) %> | <%= link_to 'Delete', drink_path(@drink),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
