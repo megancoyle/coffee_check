@@ -1,4 +1,8 @@
 class ShopsController < ApplicationController
+  def show
+    @shop = Shop.find(params[:id])
+  end
+
   def new
   end
 
@@ -11,7 +15,7 @@ class ShopsController < ApplicationController
 
   private
     def shop_params
-      params.require(:shop).permit(:name, :type)
+      params.require(:shop).permit(:name, :shop_type)
     end
 
 end
