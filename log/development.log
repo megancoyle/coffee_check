@@ -775,3 +775,57 @@ Processing by ShopsController#create as HTML
 Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/shops" for ::1 at 2016-08-02 08:17:48 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 74ms (Views: 61.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shops/1" for ::1 at 2016-08-02 08:17:50 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 77ms (Views: 60.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/shops/1/edit" for ::1 at 2016-08-02 08:17:53 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 52ms (Views: 43.4ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/shops/1" for ::1 at 2016-08-02 08:17:57 -0400
+Processing by ShopsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6BabsizqZMQZ+e5MiHHfcciOsIX+QL4x/Ol6ba9unb/gxUZgpQ6QL+N9mRcmyXn2ELk+qWmVE3HjEPf3tITWPw==", "shop"=>{"name"=>"Coffee JAms", "shop_type"=>"Chain"}, "commit"=>"Save Shop", "id"=>"1"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[33mUPDATE "shops" SET "shop_type" = $1, "updated_at" = $2 WHERE "shops"."id" = $3[0m  [["shop_type", "Chain"], ["updated_at", 2016-08-02 12:17:57 UTC], ["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/1
+Completed 302 Found in 33ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/shops/1" for ::1 at 2016-08-02 08:17:57 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 26.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 08:17:59 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.6ms)
+
+

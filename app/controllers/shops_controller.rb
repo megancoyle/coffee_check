@@ -11,6 +11,10 @@ class ShopsController < ApplicationController
     @shop = Shop.new
   end
 
+  def edit
+    @shop = Shop.find(params[:id])
+  end
+
   def create
     @shop = Shop.new(shop_params)
 
@@ -18,6 +22,16 @@ class ShopsController < ApplicationController
       redirect_to @shop
     else
       render 'new'
+    end
+  end
+
+  def update
+    @shop = Shop.find(params[:id])
+
+    if @shop.update(shop_params)
+      redirect_to @shop
+    else
+      render 'edit'
     end
   end
 
