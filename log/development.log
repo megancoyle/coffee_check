@@ -76,3 +76,17 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 85ms (Views: 35.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-08-01 21:05:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 875ms (Views: 870.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-01 21:10:01 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 83ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
