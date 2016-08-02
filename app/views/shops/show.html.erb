@@ -8,4 +8,6 @@
   <%= @shop.shop_type %>
 </p>
 
-<%= link_to 'Back', shops_path %> | <%= link_to 'Edit', edit_shop_path(@shop) %>
+<%= link_to 'Back', shops_path %> | <%= link_to 'Edit', edit_shop_path(@shop) %> | <%= link_to 'Delete', shop_path(@shop),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>

@@ -899,3 +899,140 @@ Processing by ShopsController#index as HTML
 Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/shops/new" for ::1 at 2016-08-02 08:45:20 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (10.5ms)
+  Rendered shops/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 165ms (Views: 64.2ms | ActiveRecord: 66.3ms)
+
+
+Started POST "/shops" for ::1 at 2016-08-02 08:45:29 -0400
+Processing by ShopsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8FoNgFjTeWdpCpPq1Mc8LCvNwZWKVJCfbQUhlfoscA7PWiFiJI+fPWhe+zE9Qv6Hf3FqU/a/eHG28uV7oJv7Zg==", "shop"=>{"name"=>"Coffee Coffee", "shop_type"=>"Yum!"}, "commit"=>"Create Shop"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (20.2ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Coffee Coffee"], ["shop_type", "Yum!"], ["created_at", 2016-08-02 12:45:29 UTC], ["updated_at", 2016-08-02 12:45:29 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/2
+Completed 302 Found in 36ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/shops/2" for ::1 at 2016-08-02 08:45:29 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (6.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (278.8ms)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 6.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `shop' for #<#<Class:0x007f8881e5b788>:0x007f8882eb8b58>
+Did you mean?  @shop):
+     8:   <%= @shop.shop_type %>
+     9: </p>
+    10: 
+    11: <%= link_to 'Back', shops_path %> | <%= link_to 'Edit', edit_shop_path(@shop) %> | <%= link_to 'Delete', shop_path(shop),
+    12:               method: :delete,
+    13:               data: { confirm: 'Are you sure?' } %>
+  
+app/views/shops/show.html.erb:11:in `_app_views_shops_show_html_erb___97846691895200776_70112144378520'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (164.0ms)
+Started POST "/shops" for ::1 at 2016-08-02 08:45:49 -0400
+Processing by ShopsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsaiqFlShtr1cmQy0+lA2CbgcRDhg69ezayt1bydkdVAtCwGdnBnL+cOnayUNwd9uZBBZ42kH2h/5gRe30B1sg==", "shop"=>{"name"=>"Coffee Coffee", "shop_type"=>"Yum!"}, "commit"=>"Create Shop"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.9ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Coffee Coffee"], ["shop_type", "Yum!"], ["created_at", 2016-08-02 12:45:49 UTC], ["updated_at", 2016-08-02 12:45:49 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/3
+Completed 302 Found in 13ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/shops/3" for ::1 at 2016-08-02 08:45:49 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 08:45:52 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 78ms (Views: 60.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 08:46:17 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 37.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/shops/3" for ::1 at 2016-08-02 08:46:19 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 47ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/shops/3" for ::1 at 2016-08-02 08:46:22 -0400
+Processing by ShopsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hDVDlWOQ20SQejky0kT8IIux/NwauMjZ00uY6XtG2aFqR807TLI6sYIGwKyVmruFFMHMq3afeO9hATFiGJs9xg==", "id"=>"3"}
+  [1m[36mShop Load (2.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "shops" WHERE "shops"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops
+Completed 302 Found in 22ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 08:46:22 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shops/2" for ::1 at 2016-08-02 08:46:23 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShop Load (6.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 249ms (Views: 148.0ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/shops/2" for ::1 at 2016-08-02 08:46:26 -0400
+Processing by ShopsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Np/Zs2JPq0S1GY0eAFdcu225FopxUpEcmcPjza+7gYGqPHI4qvfWACon6o/3xrXcsbULUXi+nLALaYEVWMKYQ==", "id"=>"2"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[31mDELETE FROM "shops" WHERE "shops"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops
+Completed 302 Found in 10ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 08:46:26 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 28ms (Views: 23.4ms | ActiveRecord: 2.4ms)
+
+
