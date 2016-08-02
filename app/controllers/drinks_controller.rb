@@ -9,6 +9,7 @@ class DrinksController < ApplicationController
 
   def new
     @drink = Drink.new
+    @shops = Shop.all
   end
 
   def edit
@@ -44,7 +45,7 @@ class DrinksController < ApplicationController
 
   private
     def drink_params
-      params.require(:drink).permit(:name, :kind_of_drink, :roast, :flavor)
+      params.require(:drink).permit(:shop_id, :img_url, :name, :kind_of_drink, :roast, :flavor)
     end
 
 end

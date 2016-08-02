@@ -20,8 +20,13 @@
   </p>
 
   <p>
-    <%= f.label :kind_of_type %><br>
-    <%= f.text_field :kind_of_type %>
+    <%= f.label :img_url %><br>
+    <%= f.text_field :img_url %>
+  </p>
+
+  <p>
+    <%= f.label :kind_of_drink %><br>
+    <%= f.text_field :kind_of_drink %>
   </p>
 
   <p>
@@ -32,6 +37,11 @@
   <p>
     <%= f.label :flavor %><br>
     <%= f.text_field :flavor %>
+  </p>
+
+  <p>
+    <%= f.label :shop %><br>
+    <%= f.select :shop_id, Shop.all.collect { |p| [ p.name, p.id ] }, include_blank: "Select A Coffee Shop" %>
   </p>
 
   <p>
