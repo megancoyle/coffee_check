@@ -1,3 +1,10 @@
+body.welcome {
+  background: url('/images/coffee-mug.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: cover;
+}
+
 .flash {
   border: 1px solid black;
   padding: 1em;
