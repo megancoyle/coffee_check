@@ -18,6 +18,6 @@
   <%= @drink.flavor %>
 </p>
 
-<%= link_to 'Back', drinks_path %> | <%= link_to 'Edit', edit_drink_path(@drink) %> | <%= link_to 'Delete', drink_path(@drink),
+ <%= link_to 'Back', drinks_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drink_path(@drink), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drink_path(@drink),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+              data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %>
