@@ -8,13 +8,17 @@ class ShopsController < ApplicationController
   end
 
   def new
+    @shop = Shop.new
   end
 
   def create
     @shop = Shop.new(shop_params)
 
-    @shop.save
-    redirect_to @shop
+    if @shop.save
+      redirect_to @shop
+    else
+      render 'new'
+    end
   end
 
   private
