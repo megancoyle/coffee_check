@@ -19,7 +19,7 @@ class ShopsController < ApplicationController
     @shop = Shop.new(shop_params)
 
     if @shop.save
-      redirect_to @shop
+      redirect_to @shop, notice: "A new shop was created."
     else
       render 'new'
     end

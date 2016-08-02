@@ -20,7 +20,7 @@ class DrinksController < ApplicationController
     @drink = Drink.new(drink_params)
 
     if @drink.save
-      redirect_to @drink
+      redirect_to @drink, notice: "A new drink was created."
     else
       render 'new'
     end
