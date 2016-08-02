@@ -3294,3 +3294,127 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-08-02 18:08:17 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 125ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-02 18:08:17 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:08:20 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 58ms (Views: 50.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drinks" for ::1 at 2016-08-02 18:08:21 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:08:22 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 50ms (Views: 44.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-02 18:08:26 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-02 18:09:46 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 115ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:09:49 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 71ms (Views: 62.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/shops/4" for ::1 at 2016-08-02 18:09:53 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShop Load (2.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  Rendered shops/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 62ms (Views: 43.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:09:55 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:10:42 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 128ms (Views: 112.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/drinks" for ::1 at 2016-08-02 18:10:46 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (2.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:10:48 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 50ms (Views: 41.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-02 18:10:49 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (12.6ms)
+  Rendered shops/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 64ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-02 18:10:53 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 83ms (Views: 77.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-02 18:10:55 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
