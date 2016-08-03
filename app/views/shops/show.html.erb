@@ -1,21 +1,23 @@
 <h1><%= @shop.name %></h1>
-
-<%= link_to 'Back', shops_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit Shop', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete Shop', shop_path(@shop),
-              method: :delete,
-              data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %>
-
+<div id="nav-links">
+  <%= link_to 'Back', shops_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Delete Shop', shop_path(@shop),
+                method: :delete,
+                data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %> <%= link_to 'Edit Shop', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Add Coffee', new_shop_drink_path(@shop), :class => 'fa fa-plus-circle' %>
+</div>
+<img class="shop" src="<%= @shop.img_url %>">
 <p>
   <strong>Type:</strong>
   <%= @shop.shop_type %>
 </p>
 
 <% if @shop.drinks.present? %>
+  <div class="favorite-drinks">
     <h2>Favorite Drinks</h2>
     <% @shop.drinks.each do |drink| %>
-    <li>
-      <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
-      <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>
-    </li>
+      <div class="drink-grid">
+        <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
+        <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>
+      </div>
     <% end %>
+  </div>
 <% end %>
-<%= link_to 'Add Drink', new_shop_drink_path(@shop), :class => 'fa fa-plus-circle' %>

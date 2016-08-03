@@ -40,11 +40,6 @@
   </p>
 
   <p>
-    <%= f.label :shop %><br>
-    <%= f.select :shop_id, Shop.all.collect { |p| [ p.name, p.id ] }, include_blank: "Select A Coffee Shop" %>
-  </p>
-
-  <p>
     <%= f.submit %>
   </p>
 

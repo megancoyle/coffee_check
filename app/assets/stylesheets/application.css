@@ -13,9 +13,9 @@ a.fa {
   text-decoration: none;
 }
 /* plus sign styling */
-.fa-plus-circle:before {
+/*.fa-plus-circle:before {
     margin-left: 0 !important;
-}
+}*/
 
 header {
   background: #4d0000;
@@ -50,6 +50,8 @@ body {
 .container {
   max-width: 900px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 body.welcome {
   background: url('/images/coffee-mug.jpg');
@@ -74,7 +76,34 @@ body.welcome {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
 }
+/* For shops/drink views */
+#nav-links {
+    text-align: right;
+    padding-bottom: 15px;
+    margin-top: -10px;
+}
+#nav-links a {
+  color: black;
+}
 
+/* For shop pages */
+img.shop {
+    max-width: 100%;
+    width: 100%;
+}
+.drink-grid img, .shop-grid img {
+  width: 200px;
+}
+.drink-grid, .shop-grid {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+.favorite-drinks, .favorite-shops {
+  text-align: center;
+}
+
+/* Notification messages */
 .flash {
   border: 1px solid black;
   padding: 1em;

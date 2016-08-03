@@ -1,8 +1,12 @@
 <h1>Shops</h1>
-<%= link_to 'New shop', new_shop_path, :class => 'fa fa-plus-circle' %>
-
+<div id="nav-links">
+  <%= link_to 'Add a shop', new_shop_path, :class => 'fa fa-plus-circle' %>
+</div>
+<div class="favorite-shops">
   <% @shops.each do |shop| %>
-  <p>
-    <%= link_to shop.name, shop_path(shop) %>
-  </p>
+  <div class="shop-grid">
+    <p><%= link_to shop.name, shop_path(shop) %></p>
+    <%= link_to (image_tag shop.img_url), shop_path(shop) %>
+  </div>
   <% end %>
+</div>
