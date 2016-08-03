@@ -1,8 +1,0 @@
-<h1>Drinks</h1>
-<%= link_to 'New drink', new_drink_path, :class => 'fa fa-plus-circle' %>
-
-  <% @drinks.each do |drink| %>
-  <p>
-    <%= link_to drink.name, drink_path(drink) %>
-  </p>
-  <% end %>

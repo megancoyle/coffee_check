@@ -1,36 +1,36 @@
 class DrinksController < ApplicationController
-  def index
-    @drinks = Drink.all
-  end
 
   def show
     @drink = Drink.find(params[:id])
   end
 
   def new
-    @drink = Drink.new
-    @shops = Shop.all
+    @shop = Shop.find(params[:shop_id])
+    @drink = @shop.drinks.new
   end
 
   def edit
+    @shop = Shop.find(params[:shop_id])
     @drink = Drink.find(params[:id])
   end
 
   def create
-    @drink = Drink.new(drink_params)
+    @shop = Shop.find(params[:shop_id])
+    @drink = @shop.drinks.create(drink_params)
 
     if @drink.save
-      redirect_to @drink, notice: "Sweet. You added some mo' coffee."
+      redirect_to shop_path(@shop), notice: "Sweet. You added some mo' coffee."
     else
-      render 'new'
+      redirect_to new_shop_drink_path(@shop)
     end
   end
 
   def update
+    @shop = Shop.find(params[:shop_id])
     @drink = Drink.find(params[:id])
 
     if @drink.update(drink_params)
-      redirect_to @drink
+      redirect_to shop_drink_path(@shop, @drink)
     else
       render 'edit'
     end
@@ -40,7 +40,7 @@ class DrinksController < ApplicationController
     @drink = Drink.find(params[:id])
     @drink.destroy
 
-    redirect_to drinks_path
+    redirect_to shop_path(@drink.shop)
   end
 
   private

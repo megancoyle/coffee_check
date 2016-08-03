@@ -8,3 +8,14 @@
   <strong>Type:</strong>
   <%= @shop.shop_type %>
 </p>
+
+<% if @shop.drinks.present? %>
+    <h2>Favorite Drinks</h2>
+    <% @shop.drinks.each do |drink| %>
+    <li>
+      <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
+      <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>
+    </li>
+    <% end %>
+<% end %>
+<%= link_to 'Add Drink', new_shop_drink_path(@shop), :class => 'fa fa-plus-circle' %>
