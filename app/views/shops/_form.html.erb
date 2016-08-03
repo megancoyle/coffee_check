@@ -26,7 +26,7 @@
 
   <p>
     <%= f.label :shop_type %><br>
-    <%= f.text_field :shop_type %>
+    <%= f.select :shop_type, ['Chain', 'Hipster', 'Local'], include_blank: "Select A Type" %>
   </p>
 
   <p>
