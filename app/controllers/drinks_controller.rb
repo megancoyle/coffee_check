@@ -1,4 +1,5 @@
 class DrinksController < ApplicationController
+  before_action :authenticate_user!
 
   def show
     @drink = Drink.find(params[:id])
