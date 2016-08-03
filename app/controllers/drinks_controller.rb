@@ -23,7 +23,7 @@ class DrinksController < ApplicationController
     if @drink.save
       redirect_to shop_path(@shop), notice: "Sweet. You added some mo' coffee."
     else
-      redirect_to new_shop_drink_path(@shop)
+      render 'new'
     end
   end
 

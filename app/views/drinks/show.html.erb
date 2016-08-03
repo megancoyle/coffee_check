@@ -8,17 +8,7 @@
 <% @drink.img_url = @placeholder_drink %>
 <% end %>
 <img class="drink" src="<%= @drink.img_url %>">
-<p>
-  <strong>Type:</strong>
-  <%= @drink.kind_of_drink %>
-</p>
-
-<p>
-  <strong>Roast:</strong>
-  <%= @drink.roast %>
-</p>
-
-<p>
-  <strong>Flavor:</strong>
-  <%= @drink.flavor %>
-</p>
+<ul class="drink-details">
+  <li><strong>Type:</strong> <%= @drink.kind_of_drink %></li> <li><strong>Roast:</strong> <%= @drink.roast %></li>
+  <li><strong>Flavor:</strong> <%= @drink.flavor %></li>
+</ul>

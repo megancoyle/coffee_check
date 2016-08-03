@@ -1,19 +1,10 @@
-<%= form_for [@shop, @drink] do |f| %>
-
-  <% if @drink.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@drink.errors.count, "error") %> prohibited
-        this drink from being saved:
-      </h2>
-      <ul>
-        <% @drink.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+<div id="error_explanation">
+  <% @drink.errors.full_messages.each do |message| %>
+    <p><%= message %></p>
   <% end %>
+</div>
 
+<%= form_for [@shop, @drink] do |f| %>
   <p>
     <%= f.label :name, 'Name of Drink' %><br>
     <%= f.text_field :name %>
