@@ -2,7 +2,7 @@
 <div id="nav-links">
   <%= link_to 'Back', [@drink.shop, @shop], :class => 'fa fa-arrow-left' %> <%= link_to 'Delete Coffee', [@drink.shop, @drink],
                method: :delete,
-               data: { confirm: 'Are you sure?' }, :class => 'fa fa-trash-o' %> <%= link_to 'Edit Coffee', edit_shop_drink_path(@drink.shop, @drink), :class => 'fa fa-pencil-square-o' %>
+               :class => 'fa fa-trash-o' %> <%= link_to 'Edit Coffee', edit_shop_drink_path(@drink.shop, @drink), :class => 'fa fa-pencil-square-o' %>
 </div>
 <% if @drink.img_url == "" %>
 <% @drink.img_url = @placeholder_drink %>

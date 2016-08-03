@@ -41,8 +41,7 @@ class DrinksController < ApplicationController
   def destroy
     @drink = Drink.find(params[:id])
     @drink.destroy
-
-    redirect_to shop_path(@drink.shop)
+    redirect_to shop_path(@drink.shop), alert: "You deleted some coffee."
   end
 
   private
