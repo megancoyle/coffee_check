@@ -2,7 +2,7 @@ class ShopsController < ApplicationController
   # before_action :authenticate_user!
 
   def index
-    @shops = Shop.all.sort
+    @shops = Shop.all
     @placeholder_shop = "/images/shops/shop-3.jpg"
   end
 

@@ -3,7 +3,7 @@
   <%= link_to 'Add a shop', new_shop_path, :class => 'fa fa-plus-circle' %>
 </div>
 <div class="favorite-shops">
-  <% @shops.each do |shop| %>
+  <% @shops.sort { |a,b| a.name <=> b.name }.each do |shop| %>
   <div class="shop-grid">
     <p><%= link_to shop.name, shop_path(shop) %></p>
     <% if shop.img_url == "" %>
