@@ -1,13 +1,10 @@
-<p>
-  <strong>Name:</strong>
-  <%= @shop.name %>
-</p>
+<h1><%= @shop.name %></h1>
+
+<%= link_to 'Back', shops_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit Shop', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete Shop', shop_path(@shop),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %>
 
 <p>
   <strong>Type:</strong>
   <%= @shop.shop_type %>
 </p>
-
-<%= link_to 'Back', shops_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', shop_path(@shop),
-              method: :delete,
-              data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %>
