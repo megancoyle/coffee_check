@@ -9,7 +9,7 @@ class ShopsController < ApplicationController
   def show
     @shop = Shop.find(params[:id])
     @placeholder_shop = "/images/shops/shop-3.jpg"
-    @placeholder_drinks = "/images/drinks/coffee-3.jpg"
+    @placeholder_drink = "/images/drinks/coffee-3.jpg"
   end
 
   def new

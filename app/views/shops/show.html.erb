@@ -20,6 +20,9 @@
     <% @shop.drinks.sort { |a,b| a.name <=> b.name }.each do |drink| %>
       <div class="drink-grid">
         <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
+        <% if drink.img_url == "" %>
+        <% drink.img_url = @placeholder_drink %>
+        <% end %>
         <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>
       </div>
     <% end %>
