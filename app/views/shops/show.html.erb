@@ -4,7 +4,11 @@
                 method: :delete,
                 data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %> <%= link_to 'Edit Shop', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Add Coffee', new_shop_drink_path(@shop), :class => 'fa fa-plus-circle' %>
 </div>
-<img class="shop" src="<%= @shop.img_url %>">
+  <% if @shop.img_url == "" %>
+  <% @shop.img_url = @placeholder_shop %>
+  <% end %>
+  <img class="shop" src="<%= @shop.img_url %>">
+
 <p>
   <strong>Type:</strong>
   <%= @shop.shop_type %>
@@ -13,7 +17,7 @@
 <% if @shop.drinks.present? %>
   <div class="favorite-drinks">
     <h2>Favorite Drinks</h2>
-    <% @shop.drinks.each do |drink| %>
+    <% @shop.drinks.sort { |a,b| a.name <=> b.name }.each do |drink| %>
       <div class="drink-grid">
         <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
         <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>

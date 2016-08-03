@@ -4,6 +4,10 @@
                method: :delete,
                data: { confirm: 'Are you sure?' }, :class => 'fa fa-pencil-square-o' %>
 </div>
+<% if @drink.img_url == "" %>
+<% @drink.img_url = @placeholder_drink %>
+<% end %>
+<img class="drink" src="<%= @drink.img_url %>">
 <p>
   <strong>Type:</strong>
   <%= @drink.kind_of_drink %>

@@ -3,6 +3,7 @@ class DrinksController < ApplicationController
 
   def show
     @drink = Drink.find(params[:id])
+    @placeholder_drink = "/images/drinks/coffee-3.jpg"
   end
 
   def new

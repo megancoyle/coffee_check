@@ -87,7 +87,7 @@ body.welcome {
 }
 
 /* For shop pages */
-img.shop {
+img.shop, img.drink {
     max-width: 100%;
     width: 100%;
 }

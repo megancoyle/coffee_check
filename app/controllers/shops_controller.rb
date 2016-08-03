@@ -2,11 +2,14 @@ class ShopsController < ApplicationController
   # before_action :authenticate_user!
 
   def index
-    @shops = Shop.all
+    @shops = Shop.all.sort
+    @placeholder_shop = "/images/shops/shop-3.jpg"
   end
 
   def show
     @shop = Shop.find(params[:id])
+    @placeholder_shop = "/images/shops/shop-3.jpg"
+    @placeholder_drinks = "/images/drinks/coffee-3.jpg"
   end
 
   def new

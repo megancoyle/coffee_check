@@ -6,6 +6,9 @@
   <% @shops.each do |shop| %>
   <div class="shop-grid">
     <p><%= link_to shop.name, shop_path(shop) %></p>
+    <% if shop.img_url == "" %>
+    <% shop.img_url = @placeholder_shop %>
+    <% end %>
     <%= link_to (image_tag shop.img_url), shop_path(shop) %>
   </div>
   <% end %>
