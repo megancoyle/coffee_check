@@ -15,23 +15,23 @@
   <% end %>
 
   <p>
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Name of Drink' %><br>
     <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :img_url %><br>
+    <%= f.label :img_url, 'Image URL' %><br>
     <%= f.text_field :img_url %>
   </p>
 
   <p>
-    <%= f.label :kind_of_drink %><br>
+    <%= f.label :kind_of_drink, 'Kind of Drink' %><br>
     <%= f.text_field :kind_of_drink %>
   </p>
 
   <p>
-    <%= f.label :roast %><br>
-    <%= f.text_field :roast %>
+  <%= f.label :roast %><br>
+  <%= f.select :roast, ['Light', 'Medium', 'Medium-Dark', 'Dark'], include_blank: "Select A Roast" %>
   </p>
 
   <p>
