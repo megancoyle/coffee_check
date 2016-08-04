@@ -32,7 +32,7 @@ class DrinksController < ApplicationController
     @drink = Drink.find(params[:id])
 
     if @drink.update(drink_params)
-      redirect_to shop_drink_path(@shop, @drink)
+      redirect_to shop_drink_path(@shop, @drink), notice: "Sweet, you updated a drink."
     else
       render 'edit'
     end
@@ -41,7 +41,7 @@ class DrinksController < ApplicationController
   def destroy
     @drink = Drink.find(params[:id])
     @drink.destroy
-    redirect_to shop_path(@drink.shop), alert: "You deleted some coffee."
+    redirect_to shop_path(@drink.shop), alert: "Oh nos, you deleted some coffees!"
   end
 
   private

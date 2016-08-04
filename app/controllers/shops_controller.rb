@@ -34,7 +34,7 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
 
     if @shop.update(shop_params)
-      redirect_to @shop
+      redirect_to @shop, notice: "Sweet, you updated a shop."
     else
       render 'edit'
     end
