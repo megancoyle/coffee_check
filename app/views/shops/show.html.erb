@@ -10,10 +10,10 @@
   <img class="shop" src="<%= @shop.img_url %>">
 
   <ul>
-    <% if @shop.shop_type != "" %>
+    <% if @shop.shop_type.present? %>
     <li class="fa fa-bars"><strong>Type:</strong> <%= @shop.shop_type %></li>
     <% end %>
-    <% if @shop.address != "" %>
+    <% if @shop.address.present? %>
     <li class="fa fa-map-marker"><strong>Address:</strong> <%= @shop.address %></li>
     <% end %>
   </ul>

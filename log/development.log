@@ -22976,3 +22976,1328 @@ Processing by ShopsController#index as HTML
 Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/shops/6" for ::1 at 2016-08-04 17:16:27 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 89ms (Views: 77.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/shops/6/drinks/new" for ::1 at 2016-08-04 17:16:31 -0400
+Processing by DrinksController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (12.3ms)
+  Rendered drinks/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 81ms (Views: 67.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/shops/6/drinks" for ::1 at 2016-08-04 17:16:36 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B1FtkZtRQKyVAFWbJKI7tf2wvgPhitmDHUUH1Gn5fLb/fgIianbWgvcBDbcXGUhhsPVuKnA66EZiCuIKxvHMxA==", "drink"=>{"name"=>"Coffee", "img_url"=>"", "kind_of_drink"=>"", "roast"=>"", "flavor"=>"", "thoughts"=>""}, "commit"=>"Create Drink", "shop_id"=>"6"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url", "thoughts") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Coffee"], ["kind_of_drink", ""], ["roast", ""], ["flavor", ""], ["shop_id", 6], ["created_at", 2016-08-04 21:16:36 UTC], ["updated_at", 2016-08-04 21:16:36 UTC], ["img_url", ""], ["thoughts", ""]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6
+Completed 302 Found in 43ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:16:36 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.9ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 79ms (Views: 70.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:16:39 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 59ms (Views: 50.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:16:46 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:17:14 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 54ms (Views: 47.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:17:18 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.1ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 74ms (Views: 66.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:17:21 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:17:26 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.2ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 71ms (Views: 63.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/shops/6/drinks/new" for ::1 at 2016-08-04 17:17:28 -0400
+Processing by DrinksController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (16.2ms)
+  Rendered drinks/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 123ms (Views: 112.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/shops/6/drinks" for ::1 at 2016-08-04 17:17:35 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSUrJH7oLJHdltEfvK3XXUo7p+X9xLL/aaqSnpUMbmexCkSXj8+6v7+XiTOPFqSJB353zGx0gzoW5XdAOgTeFQ==", "drink"=>{"name"=>"Latte", "img_url"=>"", "kind_of_drink"=>"", "roast"=>"Light", "flavor"=>"", "thoughts"=>""}, "commit"=>"Create Drink", "shop_id"=>"6"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url", "thoughts") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Latte"], ["kind_of_drink", ""], ["roast", "Light"], ["flavor", ""], ["shop_id", 6], ["created_at", 2016-08-04 21:17:35 UTC], ["updated_at", 2016-08-04 21:17:35 UTC], ["img_url", ""], ["thoughts", ""]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6
+Completed 302 Found in 22ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:17:35 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 66ms (Views: 58.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/shops/6/shop_comments/1" for ::1 at 2016-08-04 17:17:43 -0400
+Processing by ShopCommentsController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"1"}
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shop_comments/show.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 68ms (Views: 56.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops/6/shop_comments/1/edit" for ::1 at 2016-08-04 17:17:45 -0400
+Processing by ShopCommentsController#edit as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"1"}
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shop_comments/edit.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (3.1ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 98ms (Views: 89.8ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/shops/6/shop_comments/1" for ::1 at 2016-08-04 17:17:56 -0400
+Processing by ShopCommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tr3o4iV8tMIdqFe3QLRLqufqywY6DDa5D9v2Hjk0dYhRCrrSkbWZH8cHoTK6fJl5v7EmPe+dNI6nvqvpQZbR9g==", "shop_comment"=>{"heading"=>"It was Great", "body"=>"And oh-so delish!"}, "commit"=>"Update Shop comment", "shop_id"=>"6", "id"=>"1"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mShopComment Load (1.0ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[33mUPDATE "shop_comments" SET "body" = $1, "updated_at" = $2 WHERE "shop_comments"."id" = $3[0m  [["body", "And oh-so delish!"], ["updated_at", 2016-08-04 21:17:56 UTC], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6/shop_comments/1
+Completed 302 Found in 25ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/shops/6/shop_comments/1" for ::1 at 2016-08-04 17:17:56 -0400
+Processing by ShopCommentsController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"1"}
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shop_comments/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:17:59 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.9ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:18:15 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 120ms (Views: 108.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:19:33 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 140ms (Views: 125.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 17:19:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 133ms (Views: 79.5ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:20:29 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 216ms (Views: 200.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:21:08 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 341ms (Views: 322.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:21:26 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.8ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:21:52 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 169ms (Views: 157.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 17:21:54 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 83ms (Views: 72.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops/5/drinks/5" for ::1 at 2016-08-04 17:21:57 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"5", "id"=>"5"}
+  [1m[36mDrink Load (3.4ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 96ms (Views: 81.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/shops/5/drinks/5" for ::1 at 2016-08-04 17:22:00 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"5", "id"=>"5"}
+  [1m[36mDrink Load (2.8ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 68ms (Views: 61.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 17:22:06 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (2.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 79ms (Views: 71.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/shops/5/drinks/5" for ::1 at 2016-08-04 17:22:13 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"5", "id"=>"5"}
+  [1m[36mDrink Load (1.1ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 85ms (Views: 67.5ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5046.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coffee_check_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (152.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coffee_check_development"[0m
+  [1m[35m (136.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "coffee_check_test"[0m
+  [1m[35m (925.3ms)[0m  [1m[35mCREATE DATABASE "coffee_check_development" ENCODING = 'unicode'[0m
+  [1m[35m (488.0ms)[0m  [1m[35mCREATE DATABASE "coffee_check_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (46.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" serial primary key, "name" character varying, "kind_of_drink" character varying, "roast" character varying, "flavor" character varying, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "img_url" character varying, "thoughts" text)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_drinks_on_shop_id" ON "drinks" USING btree ("shop_id")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" serial primary key, "city" character varying, "state" character varying, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_shop_id" ON "locations" USING btree ("shop_id")[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "shop_comments" ("id" serial primary key, "heading" character varying, "body" text, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_shop_comments_on_shop_id" ON "shop_comments" USING btree ("shop_id")[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "shops" ("id" serial primary key, "name" character varying, "shop_type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "img_url" character varying, "address" character varying)[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "category_id" integer, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_category_id" ON "tags" USING btree ("category_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_shop_id" ON "tags" USING btree ("shop_id")[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (9.4ms)[0m  [1m[35mALTER TABLE "drinks" ADD CONSTRAINT "fk_rails_c459867034"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "locations" ADD CONSTRAINT "fk_rails_41bd28f491"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "shop_comments" ADD CONSTRAINT "fk_rails_ba58837646"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "tags" ADD CONSTRAINT "fk_rails_96a8141007"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "tags" ADD CONSTRAINT "fk_rails_9ab1976e8b"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160804210955')[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160802011943'), ('20160802114415'), ('20160802124957'), ('20160802143506'), ('20160802143603'), ('20160802150707'), ('20160803010306'), ('20160804124227'), ('20160804183015'), ('20160804184820'), ('20160804203507'), ('20160804203640');
+
+[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-04 21:23:50 UTC], ["updated_at", 2016-08-04 21:23:50 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "drinks" ("id" serial primary key, "name" character varying, "kind_of_drink" character varying, "roast" character varying, "flavor" character varying, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "img_url" character varying, "thoughts" text)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_drinks_on_shop_id" ON "drinks" USING btree ("shop_id")[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "locations" ("id" serial primary key, "city" character varying, "state" character varying, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_locations_on_shop_id" ON "locations" USING btree ("shop_id")[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "shop_comments" ("id" serial primary key, "heading" character varying, "body" text, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_shop_comments_on_shop_id" ON "shop_comments" USING btree ("shop_id")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "shops" ("id" serial primary key, "name" character varying, "shop_type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "img_url" character varying, "address" character varying)[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "category_id" integer, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "name" character varying)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_category_id" ON "tags" USING btree ("category_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_shop_id" ON "tags" USING btree ("shop_id")[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (6.3ms)[0m  [1m[35mALTER TABLE "drinks" ADD CONSTRAINT "fk_rails_c459867034"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "locations" ADD CONSTRAINT "fk_rails_41bd28f491"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "shop_comments" ADD CONSTRAINT "fk_rails_ba58837646"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "tags" ADD CONSTRAINT "fk_rails_96a8141007"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "tags" ADD CONSTRAINT "fk_rails_9ab1976e8b"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160804210955')[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160802011943'), ('20160802114415'), ('20160802124957'), ('20160802143506'), ('20160802143603'), ('20160802150707'), ('20160803010306'), ('20160804124227'), ('20160804183015'), ('20160804184820'), ('20160804203507'), ('20160804203640');
+
+[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Da Coffee Shop"], ["shop_type", "Chain"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/shops/shop-1.jpg"], ["address", "22nd Street NW, Washington, DC"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Coffee Break"], ["shop_type", "Hipster"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/shops/shop-2.jpg"], ["address", "123 West Street, Washington, DC"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Coffee Coffee"], ["shop_type", "Local"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/shops/shop-3.jpg"], ["address", "123 Fake Street"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "The Best Coffee Ever"], ["shop_type", "Chain"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/shops/shop-4.jpg"], ["address", "55 West Street, Washington, DC"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Amazing"], ["shop_type", "Hipster"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/shops/shop-5.jpg"], ["address", "68 8th Street, Washington, DC"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Break Time"], ["shop_type", "Chain"], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/shops/shop-6.jpg"], ["address", "1800 Connecticut Ave, Washington, DC"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Delish Latte"], ["kind_of_drink", "The Best"], ["roast", "Light"], ["flavor", "Yum"], ["shop_id", 1], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/drinks/coffee-1.jpg"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Coffee Time"], ["kind_of_drink", "Plain Coffee"], ["roast", "Dark"], ["flavor", "Sweet"], ["shop_id", 2], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/drinks/coffee-2.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Espresso Yo' Self"], ["kind_of_drink", "Espresso"], ["roast", "Medium"], ["flavor", "Sweet"], ["shop_id", 3], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/drinks/coffee-3.jpg"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "A Lil Cup o' Coffee"], ["kind_of_drink", "Plain Coffee"], ["roast", "Medium"], ["flavor", "Meh"], ["shop_id", 4], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/drinks/coffee-4.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Coffee 4 Me"], ["kind_of_drink", "Latte"], ["roast", "Light"], ["flavor", "Eh"], ["shop_id", 5], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/drinks/coffee-5.jpg"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Coffee Time"], ["kind_of_drink", "Plain Coffee"], ["roast", "Dark"], ["flavor", "Yes"], ["shop_id", 6], ["created_at", 2016-08-04 21:23:51 UTC], ["updated_at", 2016-08-04 21:23:51 UTC], ["img_url", "/images/drinks/coffee-6.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/shops/5/drinks/5" for ::1 at 2016-08-04 17:24:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"5", "id"=>"5"}
+  [1m[36mDrink Load (2.4ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (123.7ms)
+Completed 200 OK in 833ms (Views: 735.1ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 17:24:31 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:24:33 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 41ms (Views: 34.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:24:35 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.1ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (2.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (88.2ms)
+Completed 200 OK in 171ms (Views: 130.2ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 17:24:37 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (3.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (60.7ms)
+  Rendered shop_comments/new.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 226ms (Views: 111.4ms | ActiveRecord: 23.0ms)
+
+
+Started POST "/shops/6/shop_comments" for ::1 at 2016-08-04 17:25:18 -0400
+Processing by ShopCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jI51wjtu9Pl2VzVS0YYYcf1vaQTg5uc/bVQvyupDzd59flEDRCGcex0VaAWb/QL8PMVGhEWSO4Wkcd3QCBXWQw==", "shop_comment"=>{"heading"=>"It was Great", "body"=>"Viral aesthetic ramps, church-key XOXO kinfolk kickstarter trust fund helvetica sustainable typewriter wolf 8-bit cliche synth. Humblebrag sartorial meh vinyl dreamcatcher. Marfa photo booth pour-over, irony direct trade godard PBR&B pop-up crucifix pinterest ethical schlitz portland stumptown. Sartorial polaroid williamsburg, brunch poutine ethical food truck vegan PBR&B gentrify. 8-bit meh hella, brunch kogi selvage wolf typewriter food truck thundercats ramps PBR&B. Banh mi ethical shabby chic butcher pop-up, pinterest put a bird on it. Health goth kale chips asymmetrical, mustache keffiyeh forage pitchfork pour-over paleo ramps venmo.\r\n\r\nDIY health goth occupy, salvia food truck letterpress cold-pressed brunch mustache ennui. Readymade chicharrones distillery pinterest food truck listicle. Pop-up tote bag brunch chicharrones, squid scenester slow-carb cardigan kitsch beard vinyl bushwick. Small batch pork belly pabst trust fund. Scenester humblebrag dreamcatcher before they sold out. Lumbersexual bicycle rights mumblecore stumptown. Bitters blog asymmetrical, pug messenger bag pabst cold-pressed portland four dollar toast craft beer actually."}, "commit"=>"Create Shop comment", "shop_id"=>"6"}
+  [1m[36mShop Load (1.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.8ms)[0m  [1m[32mINSERT INTO "shop_comments" ("heading", "body", "shop_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["heading", "It was Great"], ["body", "Viral aesthetic ramps, church-key XOXO kinfolk kickstarter trust fund helvetica sustainable typewriter wolf 8-bit cliche synth. Humblebrag sartorial meh vinyl dreamcatcher. Marfa photo booth pour-over, irony direct trade godard PBR&B pop-up crucifix pinterest ethical schlitz portland stumptown. Sartorial polaroid williamsburg, brunch poutine ethical food truck vegan PBR&B gentrify. 8-bit meh hella, brunch kogi selvage wolf typewriter food truck thundercats ramps PBR&B. Banh mi ethical shabby chic butcher pop-up, pinterest put a bird on it. Health goth kale chips asymmetrical, mustache keffiyeh forage pitchfork pour-over paleo ramps venmo.\r\n\r\nDIY health goth occupy, salvia food truck letterpress cold-pressed brunch mustache ennui. Readymade chicharrones distillery pinterest food truck listicle. Pop-up tote bag brunch chicharrones, squid scenester slow-carb cardigan kitsch beard vinyl bushwick. Small batch pork belly pabst trust fund. Scenester humblebrag dreamcatcher before they sold out. Lumbersexual bicycle rights mumblecore stumptown. Bitters blog asymmetrical, pug messenger bag pabst cold-pressed portland four dollar toast craft beer actually."], ["shop_id", 6], ["created_at", 2016-08-04 21:25:18 UTC], ["updated_at", 2016-08-04 21:25:18 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6
+Completed 302 Found in 108ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:25:18 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (3.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (2.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 117ms (Views: 103.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:25:31 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (3.2ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 110ms (Views: 95.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:25:33 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.2ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (3.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 84ms (Views: 69.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/shops/6/drinks/new" for ::1 at 2016-08-04 17:25:34 -0400
+Processing by DrinksController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (29.0ms)
+  Rendered drinks/new.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 109ms (Views: 89.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/shops/6/drinks" for ::1 at 2016-08-04 17:26:08 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yhdFCvyFpcXiHIbyvi/BXWWmlNkXK+JMKxhMo5ZJUm4yOCq5DaIz64Ad3t6NlLKJKONE8Iab04lUV6l9OUHiHA==", "drink"=>{"name"=>"Latte", "img_url"=>"", "kind_of_drink"=>"", "roast"=>"Medium", "flavor"=>"", "thoughts"=>""}, "commit"=>"Create Drink", "shop_id"=>"6"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url", "thoughts") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Latte"], ["kind_of_drink", ""], ["roast", "Medium"], ["flavor", ""], ["shop_id", 6], ["created_at", 2016-08-04 21:26:08 UTC], ["updated_at", 2016-08-04 21:26:08 UTC], ["img_url", ""], ["thoughts", ""]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6
+Completed 302 Found in 92ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:26:08 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.0ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 155ms (Views: 145.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:26:11 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (1.5ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 68ms (Views: 59.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:26:17 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 90ms (Views: 79.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:26:19 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (5.0ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 40.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:26:26 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 103ms (Views: 90.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:26:28 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shops/1" for ::1 at 2016-08-04 17:26:30 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.9ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 1]]
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 1]]
+  Rendered shops/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 71ms (Views: 65.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/shops/1/drinks/1" for ::1 at 2016-08-04 17:26:32 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"1", "id"=>"1"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 62ms (Views: 55.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/shops/1/drinks/1" for ::1 at 2016-08-04 17:27:14 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"1", "id"=>"1"}
+  [1m[36mDrink Load (1.5ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 173ms (Views: 129.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/shops/1" for ::1 at 2016-08-04 17:27:19 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 1]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 1]]
+  Rendered shops/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 89ms (Views: 79.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:27:23 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 121ms (Views: 115.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 17:27:25 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.0ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (1.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 81ms (Views: 70.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:27:28 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (5.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 173ms (Views: 136.9ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:27:30 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (1.2ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 65ms (Views: 58.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:28:10 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (49.5ms)
+Completed 200 OK in 205ms (Views: 181.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:28:13 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 84ms (Views: 76.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:28:15 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (40.4ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `exists?' for "":String):
+    20:   <% end %>
+    21: </ul>
+    22: 
+    23: <% if @drink.thoughts.exists? %>
+    24: <div class="detail-page">
+    25:   <h2>Thoughts</h2>
+    26:   <p><%= @drink.thoughts %></p>
+  
+app/views/drinks/show.html.erb:23:in `_app_views_drinks_show_html_erb___4239604246151280642_70340945512820'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.6ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (140.2ms)
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:28:46 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (1.2ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 119ms (Views: 92.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:28:50 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 69ms (Views: 59.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:28:55 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 71ms (Views: 64.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:28:58 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 52ms (Views: 47.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:29:01 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:29:02 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:29:04 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:29:07 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:29:10 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:29:14 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (3.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (4.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 210ms (Views: 190.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:29:20 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shops/4" for ::1 at 2016-08-04 17:29:23 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 4]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 4]]
+  Rendered shops/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/shops/4/drinks/4" for ::1 at 2016-08-04 17:29:24 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"4", "id"=>"4"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:29:28 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:29:29 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:29:31 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops/6/drinks/6/edit" for ::1 at 2016-08-04 17:29:33 -0400
+Processing by DrinksController#edit as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/edit.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (7.7ms)
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 58ms (Views: 43.2ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/shops/6/drinks/6" for ::1 at 2016-08-04 17:29:51 -0400
+Processing by DrinksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DpgYW7SeSN+JlscHuYx5QF44ClC1BpWsw55XA34oXd4sV7E/SU9//wTIy36espJ8hE4Ri+o7Bq3KQIKWKItlzw==", "drink"=>{"name"=>"Coffee Time", "img_url"=>"/images/drinks/coffee-6.jpg", "kind_of_drink"=>"Plain Coffee", "roast"=>"Dark", "flavor"=>"Yes", "thoughts"=>"dffasefawefsdfsd"}, "commit"=>"Update Drink", "shop_id"=>"6", "id"=>"6"}
+  [1m[36mShop Load (1.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mDrink Load (2.2ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[33mUPDATE "drinks" SET "thoughts" = $1, "updated_at" = $2 WHERE "drinks"."id" = $3[0m  [["thoughts", "dffasefawefsdfsd"], ["updated_at", 2016-08-04 21:29:51 UTC], ["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6/drinks/6
+Completed 302 Found in 59ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:29:51 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (1.2ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 17:30:35 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (1.5ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 287ms (Views: 241.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:30:43 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (4.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.8ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 219ms (Views: 188.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/shops/6/drinks/new" for ::1 at 2016-08-04 17:30:45 -0400
+Processing by DrinksController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (2.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (40.4ms)
+  Rendered drinks/new.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 338ms (Views: 252.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/shops/6/drinks" for ::1 at 2016-08-04 17:30:56 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mf/k//G4mjX9ZfYvzmvOk1PUQQWCt7opPOB0B7gUVL0Ms0YQjpZSUMLb6+mjn5H3x8aO7TnFB7Q9d3CRw/NsMA==", "drink"=>{"name"=>"Coffee", "img_url"=>"", "kind_of_drink"=>"", "roast"=>"", "flavor"=>"", "thoughts"=>""}, "commit"=>"Create Drink", "shop_id"=>"6"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.3ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url", "thoughts") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Coffee"], ["kind_of_drink", ""], ["roast", ""], ["flavor", ""], ["shop_id", 6], ["created_at", 2016-08-04 21:30:56 UTC], ["updated_at", 2016-08-04 21:30:56 UTC], ["img_url", ""], ["thoughts", ""]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6
+Completed 302 Found in 42ms (ActiveRecord: 19.2ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 17:30:56 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 64ms (Views: 56.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/shops/6/drinks/7" for ::1 at 2016-08-04 17:31:00 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"7"}
+  [1m[36mDrink Load (1.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 62ms (Views: 54.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shops/6/drinks/8" for ::1 at 2016-08-04 17:31:04 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"8"}
+  [1m[36mDrink Load (1.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 89ms (Views: 79.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:31:07 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 82ms (Views: 75.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-04 17:31:09 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (17.4ms)
+  Rendered shops/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 138ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shops" for ::1 at 2016-08-04 17:31:18 -0400
+Processing by ShopsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C8z9xnKD0dorZi7E6tFdKLVMlmJ7jPsQpaM9q7NJFAC8HW1X1QEXnp+HYp/Vzwm8AaOm5TIjvDybAx+N/Z1lqg==", "shop"=>{"name"=>"Coffee Coffee", "address"=>"", "img_url"=>"", "shop_type"=>""}, "commit"=>"Create Shop"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Coffee Coffee"], ["shop_type", ""], ["created_at", 2016-08-04 21:31:18 UTC], ["updated_at", 2016-08-04 21:31:18 UTC], ["img_url", ""], ["address", ""]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/7
+Completed 302 Found in 23ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/shops/7" for ::1 at 2016-08-04 17:31:18 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 66ms (Views: 60.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:31:22 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:32:15 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 304ms (Views: 291.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:32:15 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:32:17 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 144ms (Views: 138.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 17:32:18 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 137ms (Views: 66.7ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:32:31 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-04 17:32:35 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (4.4ms)
+  Rendered shops/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 17:32:38 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops/1/drinks/1" for ::1 at 2016-08-04 17:32:45 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"1", "id"=>"1"}
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 64ms (Views: 53.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops/1" for ::1 at 2016-08-04 17:32:49 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 1]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 1]]
+  Rendered shops/show.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 106ms (Views: 100.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops/1/drinks/1" for ::1 at 2016-08-04 17:32:51 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"1", "id"=>"1"}
+  [1m[36mDrink Load (2.8ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 84ms (Views: 72.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/shops/1" for ::1 at 2016-08-04 17:32:54 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 1]]
+  [1m[36mDrink Load (1.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 1]]
+  Rendered shops/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 61ms (Views: 52.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:32:56 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/shops/7" for ::1 at 2016-08-04 17:33:16 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 96ms (Views: 86.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/shops/7/drinks/new" for ::1 at 2016-08-04 17:33:22 -0400
+Processing by DrinksController#new as HTML
+  Parameters: {"shop_id"=>"7"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (8.9ms)
+  Rendered drinks/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 67ms (Views: 55.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/shops/7/drinks" for ::1 at 2016-08-04 17:33:25 -0400
+Processing by DrinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1C1iUPmZ4P1LXcenuosXYkAOb2P6kULf9a8XufUg7oCpKz8kJHe+YkZsV8V0dIIMJam+L70pSbaCQcuYWC2mhw==", "drink"=>{"name"=>"Coffee", "img_url"=>"", "kind_of_drink"=>"", "roast"=>"", "flavor"=>"", "thoughts"=>""}, "commit"=>"Create Drink", "shop_id"=>"7"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "drinks" ("name", "kind_of_drink", "roast", "flavor", "shop_id", "created_at", "updated_at", "img_url", "thoughts") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Coffee"], ["kind_of_drink", ""], ["roast", ""], ["flavor", ""], ["shop_id", 7], ["created_at", 2016-08-04 21:33:25 UTC], ["updated_at", 2016-08-04 21:33:25 UTC], ["img_url", ""], ["thoughts", ""]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/7
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/shops/7" for ::1 at 2016-08-04 17:33:25 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 58ms (Views: 53.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/shops/7/drinks/9" for ::1 at 2016-08-04 17:33:28 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"7", "id"=>"9"}
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 70ms (Views: 64.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/shops/7/drinks/9/edit" for ::1 at 2016-08-04 17:33:30 -0400
+Processing by DrinksController#edit as HTML
+  Parameters: {"shop_id"=>"7", "id"=>"9"}
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering drinks/edit.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (5.6ms)
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered drinks/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 88ms (Views: 80.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/shops/7/drinks/9" for ::1 at 2016-08-04 17:33:37 -0400
+Processing by DrinksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hiTGUH/4MVdy6w/PDnr9ppHdbueVZ+N9Bv6Zf4NvyKhyOnJ0nnOUtz50nSo2dKSLfFG/ZaDLZRQ3w4/JNIobqA==", "shop_id"=>"7", "id"=>"9"}
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "drinks" WHERE "drinks"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShop Load (0.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shops/7
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/shops/7" for ::1 at 2016-08-04 17:33:37 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/shops/7" for ::1 at 2016-08-04 17:33:44 -0400
+Processing by ShopsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dzay8atyQPKR/jKmbqnmV3msYLtV2exC5Ty5H/aU0JX7KAbVSvnlEt1hoENWp796lCCxOWB1aivUAa+pQXEDlQ==", "id"=>"7"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mShopComment Load (0.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[35mSQL (3.7ms)[0m  [1m[31mDELETE FROM "shops" WHERE "shops"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops
+Completed 302 Found in 42ms (ActiveRecord: 22.3ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:33:44 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:33:47 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 17:35:34 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 133ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 17:35:38 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+

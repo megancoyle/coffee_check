@@ -151,10 +151,10 @@ img.shop, img.drink {
     margin: 0 auto;
 }
 input, select {
-  height: 30px;
+  height: 60px;
 }
 textarea {
-  height: 60px;
+  height: 90px;
 }
 
 input, textarea, select {
