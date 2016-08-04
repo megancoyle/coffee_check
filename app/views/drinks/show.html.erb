@@ -10,12 +10,12 @@
 <img class="drink" src="<%= @drink.img_url %>">
 <ul class="drink-details">
   <% if @drink.kind_of_drink != "" %>
-    <li><strong>Type:</strong> <%= @drink.kind_of_drink %></li>
+    <li class="fa fa-heart"><strong>Type:</strong> <%= @drink.kind_of_drink %></li>
   <% end %>
   <% if @drink.roast != "" %>
-     <li><strong>Roast:</strong> <%= @drink.roast %></li>
+     <li class="fa fa-coffee"><strong>Roast:</strong> <%= @drink.roast %></li>
   <% end %>
   <% if @drink.flavor != "" %>
-    <li><strong>Flavor:</strong> <%= @drink.flavor %></li>
+    <li class="fa fa-spoon"><strong>Flavor:</strong> <%= @drink.flavor %></li>
   <% end %>
 </ul>
