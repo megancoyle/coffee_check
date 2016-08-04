@@ -17,7 +17,7 @@
   <% if @shop.shop_comments.present? %>
       <h2>Details</h2>
       <% @shop.shop_comments.each do |comment| %>
-          <p><%= link_to comment.heading, shop_shop_comment_path(@shop, comment) %></p>
+          <h3><%= link_to comment.heading, shop_shop_comment_path(@shop, comment) %></h3>
           <p><%= comment.body %></p>
       <% end %>
 <% end %>
