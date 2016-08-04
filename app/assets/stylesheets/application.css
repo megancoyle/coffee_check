@@ -179,7 +179,7 @@ input[type="submit"]:hover {
   background: gray;
 }
 input[type='checkbox'] {
-  width: 10px;
+  width: auto;
 }
 .field {
     margin-bottom: 15px;
