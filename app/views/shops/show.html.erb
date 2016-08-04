@@ -2,29 +2,37 @@
 <div id="nav-links">
   <%= link_to 'Back', shops_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Delete Shop', shop_path(@shop),
                 method: :delete,
-                :class => 'fa fa-trash-o' %> <%= link_to 'Edit Shop', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Add Coffee', new_shop_drink_path(@shop), :class => 'fa fa-plus-circle' %>
+                :class => 'fa fa-trash-o' %> <%= link_to 'Edit Shop', edit_shop_path(@shop), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Add Coffee', new_shop_drink_path(@shop), :class => 'fa fa-plus-circle' %> <%= link_to 'Add a Detail', new_shop_shop_comment_path(@shop), :class => 'fa fa-comment' %>
 </div>
   <% if @shop.img_url == "" %>
   <% @shop.img_url = @placeholder_shop %>
   <% end %>
   <img class="shop" src="<%= @shop.img_url %>">
 
-<p>
-  <strong>Type:</strong>
-  <%= @shop.shop_type %>
-</p>
+  <p>
+    <strong>Type:</strong>
+    <%= @shop.shop_type %>
+  </p>
 
-<% if @shop.drinks.present? %>
-  <div class="favorite-drinks">
-    <h2>Favorite Drinks</h2>
-    <% @shop.drinks.sort { |a,b| a.name <=> b.name }.each do |drink| %>
-      <div class="drink-grid">
-        <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
-        <% if drink.img_url == "" %>
-        <% drink.img_url = @placeholder_drink %>
-        <% end %>
-        <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>
-      </div>
-    <% end %>
-  </div>
+  <% if @shop.shop_comments.present? %>
+      <h2>Details</h2>
+      <% @shop.shop_comments.each do |comment| %>
+          <p><%= link_to comment.heading, shop_shop_comment_path(@shop, comment) %></p>
+          <p><%= comment.body %></p>
+      <% end %>
+<% end %>
+
+  <% if @shop.drinks.present? %>
+    <div class="favorite-drinks">
+      <h2>Favorite Drinks</h2>
+      <% @shop.drinks.sort { |a,b| a.name <=> b.name }.each do |drink| %>
+        <div class="drink-grid">
+          <p><%= link_to drink.name, shop_drink_path(@shop, drink) %></p>
+          <% if drink.img_url == "" %>
+          <% drink.img_url = @placeholder_drink %>
+          <% end %>
+          <%= link_to (image_tag drink.img_url), shop_drink_path(@shop, drink) %>
+        </div>
+      <% end %>
+    </div>
 <% end %>
