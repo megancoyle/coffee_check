@@ -17,6 +17,10 @@ a.fa {
     margin-left: 0 !important;
 }*/
 
+a {
+    text-decoration: none;
+}
+
 header, footer {
   background: #101618;
 }
@@ -119,6 +123,13 @@ img.shop, img.drink {
 .shop-grid img {
   width: 400px;
 }
+.detail {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid #737373;
+}
+
 .drink-grid, .shop-grid {
   display: inline-block;
   vertical-align: top;
@@ -127,6 +138,12 @@ img.shop, img.drink {
 .favorite-drinks, .favorite-shops {
   text-align: center;
 }
+/* Details */
+.detail-page {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 /* Form Styling */
 .form-block {
     max-width: 500px;
@@ -136,9 +153,8 @@ img.shop, img.drink {
 
 /* Notification messages */
 .flash {
-  border: 1px solid black;
-  padding: 1em;
-  background: #eee;
+    border-bottom: 1px solid #737373;
+    padding: 1em;
 }
 
 .alert  { color: red;  }
