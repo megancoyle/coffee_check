@@ -113,8 +113,11 @@ img.shop, img.drink {
     max-width: 100%;
     width: 100%;
 }
-.drink-grid img, .shop-grid img {
+.drink-grid img {
   width: 200px;
+}
+.shop-grid img {
+  width: 400px;
 }
 .drink-grid, .shop-grid {
   display: inline-block;
