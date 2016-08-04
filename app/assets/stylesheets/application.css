@@ -152,7 +152,6 @@ img.shop, img.drink {
 }
 input, select {
   height: 30px;
-  margin-top: 10px;
 }
 textarea {
   height: 60px;
@@ -162,6 +161,7 @@ input, textarea, select {
     width: 100%;
     border: 1px solid #737373;
     padding: 10px;
+    margin-top: 10px;
     font-size: 14px;
     -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -195,7 +195,6 @@ input[type='checkbox'] {
 .notice { color: blue; }
 #error_explanation {
     color: red;
-    padding-bottom: 20px;
 }
 .user-info {
   text-align: right;
