@@ -193,7 +193,10 @@ input[type='checkbox'] {
 
 .alert  { color: red;  }
 .notice { color: blue; }
-
+#error_explanation {
+    color: red;
+    padding-bottom: 20px;
+}
 .user-info {
   text-align: right;
   padding-top: 20px;
