@@ -19,3 +19,8 @@
     <li class="fa fa-spoon"><strong>Flavor:</strong> <%= @drink.flavor %></li>
   <% end %>
 </ul>
+
+<% if @drink.thoughts %>
+  <h3>Thoughts</h3>
+  <p><%= @drink.thoughts %></p>
+<% end %>

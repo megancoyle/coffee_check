@@ -9,10 +9,14 @@
   <% end %>
   <img class="shop" src="<%= @shop.img_url %>">
 
-  <p>
-    <strong>Type:</strong>
-    <%= @shop.shop_type %>
-  </p>
+  <ul>
+    <% if @shop.shop_type != "" %>
+    <li class="fa fa-bars"><strong>Type:</strong> <%= @shop.shop_type %></li>
+    <% end %>
+    <% if @shop.address != "" %>
+    <li class="fa fa-map-marker"><strong>Address:</strong> <%= @shop.address %></li>
+    <% end %>
+  </ul>
 
   <% if @shop.shop_comments.present? %>
       <h2>Details</h2>

@@ -2,16 +2,16 @@ Shop.destroy_all
 Drink.destroy_all
 
 shop_list = [
-  ["Da Coffee Shop", "Chain", "/images/shops/shop-1.jpg"],
-  ["Coffee Break", "Hipster", "/images/shops/shop-2.jpg"],
-  ["Coffee Coffee", "Local", "/images/shops/shop-3.jpg"],
-  ["The Best Coffee Ever", "Chain", "/images/shops/shop-4.jpg"],
-  ["Amazing", "Hipster", "/images/shops/shop-5.jpg"],
-  ["Break Time", "Chain", "/images/shops/shop-6.jpg"]
+  ["Da Coffee Shop", "22nd Street NW, Washington, DC", "Chain", "/images/shops/shop-1.jpg"],
+  ["Coffee Break", "123 West Street, Washington, DC", "Hipster", "/images/shops/shop-2.jpg"],
+  ["Coffee Coffee", "123 Fake Street", "Local", "/images/shops/shop-3.jpg"],
+  ["The Best Coffee Ever", "55 West Street, Washington, DC", "Chain", "/images/shops/shop-4.jpg"],
+  ["Amazing", "68 8th Street, Washington, DC", "Hipster", "/images/shops/shop-5.jpg"],
+  ["Break Time", "1800 Connecticut Ave, Washington, DC", "Chain", "/images/shops/shop-6.jpg"]
 ]
 
-shop_list.each do |name, shop_type, image|
-  Shop.create(name: name, shop_type: shop_type, img_url: image)
+shop_list.each do |name, address, shop_type, image|
+  Shop.create(name: name, address: address, shop_type: shop_type, img_url: image)
 end
 
 drink_list = [
