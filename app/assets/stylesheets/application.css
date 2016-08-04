@@ -150,6 +150,35 @@ img.shop, img.drink {
     padding: 20px;
     margin: 0 auto;
 }
+input, select {
+  height: 30px;
+}
+textarea {
+  height: 60px;
+}
+
+input, textarea, select {
+    width: 100%;
+    border: 1px solid #737373;
+    padding: 10px;
+    font-size: 14px;
+}
+input[type="submit"] {
+    padding: 0 10px 0 10px;
+    width: auto;
+    cursor: pointer;
+    color: white;
+    background: black;
+}
+input[type="submit"]:hover {
+  background: gray;
+}
+input[type='checkbox'] {
+  width: 10px;
+}
+.field {
+    margin-bottom: 15px;
+}
 
 /* Notification messages */
 .flash {

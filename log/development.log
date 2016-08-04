@@ -18378,3 +18378,914 @@ Processing by ShopsController#show as HTML
 Completed 200 OK in 78ms (Views: 65.9ms | ActiveRecord: 4.4ms)
 
 
+Started GET "/shops/6/shop_comments/2" for ::1 at 2016-08-04 10:21:54 -0400
+Processing by ShopCommentsController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"2"}
+  [1m[36mShopComment Load (1.1ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering shop_comments/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 131ms (Views: 110.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops/6/shop_comments/2/edit" for ::1 at 2016-08-04 10:21:58 -0400
+Processing by ShopCommentsController#edit as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"2"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering shop_comments/edit.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (11.1ms)
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 82ms (Views: 73.1ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/shops/6/shop_comments/2" for ::1 at 2016-08-04 10:22:10 -0400
+Processing by ShopCommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSfgHyJlDpOxdXqvDwBLgm6VnyE49zdy6V56k6AvLH0hsFC9q15BrM4W6VbFnwuJBw4QosTYTjzZhMtSxfd7Eg==", "shop_comment"=>{"heading"=>"It was Great", "body"=>"Wonderful place to chillax"}, "commit"=>"Update Shop comment", "shop_id"=>"6", "id"=>"2"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6/shop_comments/2
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/shops/6/shop_comments/2" for ::1 at 2016-08-04 10:22:10 -0400
+Processing by ShopCommentsController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"2"}
+  [1m[36mShopComment Load (4.5ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering shop_comments/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 54ms (Views: 45.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 10:22:16 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.0ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 60ms (Views: 53.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 10:22:18 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:20:38 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (18.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 460ms (Views: 402.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:20:41 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (5.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 86ms (Views: 68.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:22:20 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:22:22 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 73ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-08-04 11:23:57 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jKTqWEcvf8JllHuFnnU7dom83Xx8eXrAk1L7jMgtD6Z39Aq2Omh+h9TCkPk85epav+bOxlSawC6OvVXGnr+i+A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (7.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 296ms (Views: 136.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:25:32 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 253ms (Views: 237.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:25:32 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 287ms (Views: 279.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:25:34 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:25:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 106ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 11:25:39 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 144ms (Views: 137.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:25:42 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 71ms (Views: 63.2ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:25:43 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.2ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 63ms (Views: 55.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 11:25:44 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (3.9ms)
+  Rendered shop_comments/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 73ms (Views: 61.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 11:26:09 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (2.8ms)
+  Rendered shop_comments/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 93ms (Views: 83.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 11:26:37 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (6.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (5.8ms)
+  Rendered shop_comments/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 150ms (Views: 134.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:26:49 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (1.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 126ms (Views: 106.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/shops/6/shop_comments/2" for ::1 at 2016-08-04 11:26:52 -0400
+Processing by ShopCommentsController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"2"}
+  [1m[36mShopComment Load (7.7ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering shop_comments/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 77ms (Views: 60.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:26:55 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (5.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (4.3ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (3.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 105ms (Views: 86.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:28:22 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (8.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 126ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:29:06 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 133ms (Views: 131.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:29:08 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:29:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:29:12 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 86ms (Views: 74.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:29:13 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:29:24 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 245ms (Views: 243.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:30:35 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 193ms (Views: 176.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:30:57 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 215ms (Views: 171.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:31:08 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 138ms (Views: 135.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:31:18 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:31:37 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (12.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 162ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:33:39 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 252ms (Views: 228.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-08-04 11:33:47 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WpNk+IedvbxR6sjlY2U6gyOIP0QwqJGQUEqwb2kYT6iujdDcZhYYXB11WgBba2OuzgTuxgUEF/lhd6bZ3v2cqA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (7.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 147ms (Views: 113.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for ::1 at 2016-08-04 11:34:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.6ms)
+  Rendered collection of /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [48 times] (100.5ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (62.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (384.1ms)
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:34:25 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 115ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:34:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:35:13 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 111ms (Views: 99.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:35:14 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (5.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.1ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (2.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (322.1ms)
+Completed 200 OK in 397ms (Views: 370.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 11:35:16 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (7.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (7.3ms)
+  Rendered shop_comments/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 97ms (Views: 78.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:35:20 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (5.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 68ms (Views: 59.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:35:27 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:35:30 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 95ms (Views: 89.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:37:40 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (2.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 264ms (Views: 226.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:37:42 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:37:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:39:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 355ms (Views: 330.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:39:24 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 61ms (Views: 50.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:39:26 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:39:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:39:29 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 66ms (Views: 59.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:39:30 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 85ms (Views: 74.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops/6/drinks/new" for ::1 at 2016-08-04 11:39:32 -0400
+Processing by DrinksController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/new.html.erb within layouts/application
+  Rendered drinks/_form.html.erb (10.9ms)
+  Rendered drinks/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 79ms (Views: 70.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:39:55 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 180ms (Views: 165.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:39:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 118ms (Views: 114.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:39:58 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:39:59 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 84ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:40:00 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 87ms (Views: 81.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 11:40:01 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (3.0ms)
+  Rendered shop_comments/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 56ms (Views: 46.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:42:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 177ms (Views: 158.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:42:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:42:39 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 68ms (Views: 59.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:42:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 74ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:43:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 288ms (Views: 272.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:44:15 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 128ms (Views: 115.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:44:16 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 78ms (Views: 66.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 11:44:17 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (7.2ms)
+  Rendered shop_comments/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 71ms (Views: 59.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:44:19 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.1ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 84ms (Views: 75.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops/6/edit" for ::1 at 2016-08-04 11:44:20 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (5.0ms)
+  Rendered shops/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 68ms (Views: 54.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shops/6/edit" for ::1 at 2016-08-04 11:44:50 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (17.6ms)
+  Rendered shops/edit.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 192ms (Views: 172.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:45:01 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (3.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:45:02 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 75ms (Views: 69.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/shops/6/edit" for ::1 at 2016-08-04 11:45:04 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (5.9ms)
+  Rendered shops/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 78ms (Views: 71.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/6/edit" for ::1 at 2016-08-04 11:46:43 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (17.8ms)
+  Rendered shops/edit.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 223ms (Views: 201.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/shops/6/edit" for ::1 at 2016-08-04 11:47:14 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (3.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (14.3ms)
+  Rendered shops/edit.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 253ms (Views: 230.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:47:19 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (7.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 127ms (Views: 111.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 11:47:20 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 62ms (Views: 55.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:47:22 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:47:23 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:47:25 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-08-04 11:47:29 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 104ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-08-04 11:48:14 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 119ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-08-04 11:48:33 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 110ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-08-04 11:48:47 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-08-04 11:49:27 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (11.7ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 280ms (Views: 245.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:49:32 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:49:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2016-08-04 11:49:36 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 67ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:49:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:49:39 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 11:49:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:49:44 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (6.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 53ms (Views: 43.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 11:49:45 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:49:46 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (3.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-04 11:49:47 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (4.8ms)
+  Rendered shops/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 11:49:53 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 4.5ms)
+
+
