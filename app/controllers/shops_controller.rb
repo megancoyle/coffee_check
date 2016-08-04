@@ -3,13 +3,13 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.all
-    @placeholder_shop = "/images/shops/shop-3.jpg"
+    @placeholder_shop = "/images/shops/default.jpg"
   end
 
   def show
     @shop = Shop.find(params[:id])
-    @placeholder_shop = "/images/shops/shop-3.jpg"
-    @placeholder_drink = "/images/drinks/coffee-3.jpg"
+    @placeholder_shop = "/images/shops/default.jpg"
+    @placeholder_drink = "/images/drinks/default.jpg"
   end
 
   def new

@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body class="<%= controller.controller_name %>">
@@ -24,17 +25,19 @@
     </header>
 
     <div class="container">
-      <% if user_signed_in? %>
-        <div class="user-info">
-          Logged in as <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
-        </div>
-      <% end %>
+        <div class="content">
+        <% if user_signed_in? %>
+          <div class="user-info">
+            Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+          </div>
+        <% end %>
 
-      <% flash.each do |type, message| %>
-          <p class="flash <%= type %>"><%= message %></p>
-      <% end %>
-      <%= yield %>
+        <% flash.each do |type, message| %>
+            <p class="flash <%= type %>"><%= message %></p>
+        <% end %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

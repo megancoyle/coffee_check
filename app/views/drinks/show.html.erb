@@ -9,6 +9,13 @@
 <% end %>
 <img class="drink" src="<%= @drink.img_url %>">
 <ul class="drink-details">
-  <li><strong>Type:</strong> <%= @drink.kind_of_drink %></li> <li><strong>Roast:</strong> <%= @drink.roast %></li>
-  <li><strong>Flavor:</strong> <%= @drink.flavor %></li>
+  <% if @drink.kind_of_drink != "" %>
+    <li><strong>Type:</strong> <%= @drink.kind_of_drink %></li>
+  <% end %>
+  <% if @drink.roast != "" %>
+     <li><strong>Roast:</strong> <%= @drink.roast %></li>
+  <% end %>
+  <% if @drink.flavor != "" %>
+    <li><strong>Flavor:</strong> <%= @drink.flavor %></li>
+  <% end %>
 </ul>
