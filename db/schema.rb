@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804184820) do
+ActiveRecord::Schema.define(version: 20160804210955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "drinks", force: :cascade do |t|
     t.string   "name"
@@ -55,6 +61,16 @@ ActiveRecord::Schema.define(version: 20160804184820) do
     t.string   "address"
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "shop_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.index ["category_id"], name: "index_tags_on_category_id", using: :btree
+    t.index ["shop_id"], name: "index_tags_on_shop_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -75,4 +91,6 @@ ActiveRecord::Schema.define(version: 20160804184820) do
   add_foreign_key "drinks", "shops"
   add_foreign_key "locations", "shops"
   add_foreign_key "shop_comments", "shops"
+  add_foreign_key "tags", "categories"
+  add_foreign_key "tags", "shops"
 end

@@ -21981,3 +21981,998 @@ Processing by ShopsController#show as HTML
 Completed 200 OK in 65ms (Views: 55.9ms | ActiveRecord: 3.8ms)
 
 
+Started GET "/users/sign_up" for ::1 at 2016-08-04 15:04:25 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 157ms (Views: 96.5ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 15:04:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 83ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:04:32 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 63ms (Views: 58.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 15:04:36 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:04:38 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-04 15:04:40 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (11.6ms)
+  Rendered shops/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:04:49 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 96ms (Views: 79.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 15:04:50 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (2.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 74ms (Views: 65.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:07:36 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (17.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 170ms (Views: 133.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 15:07:37 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (5.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (1.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 81ms (Views: 65.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 15:19:50 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 128ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:19:53 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (19.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 99ms (Views: 72.9ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 15:19:54 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (6.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.0ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 114ms (Views: 98.0ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:31:52 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (20.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 188ms (Views: 154.0ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 15:31:53 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (7.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (3.0ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 88ms (Views: 69.0ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:31:55 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:31:57 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 15:32:00 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 15:32:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 15:32:04 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 69ms (Views: 63.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:29:20 -0400
+Started GET "/shops" for ::1 at 2016-08-04 16:29:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopsController#index as HTML
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (3.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  [1m[36mShop Load (3.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (63.0ms)
+  Rendered shops/index.html.erb within layouts/application (103.6ms)
+Completed 200 OK in 1038ms (Views: 969.6ms | ActiveRecord: 22.3ms)
+
+
+Completed 200 OK in 1070ms (Views: 918.4ms | ActiveRecord: 97.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 16:29:22 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:29:39 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 82ms (Views: 65.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 16:29:42 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (114.3ms)
+Completed 200 OK in 189ms (Views: 153.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 16:29:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 89ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 16:29:47 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1231090217252467950);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20160804203507)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (56.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160804203507"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTags (20160804203640)
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" serial primary key, "category_id" integer, "shop_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_96a8141007"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_9ab1976e8b"
+FOREIGN KEY ("shop_id")
+  REFERENCES "shops" ("id")
+)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_category_id" ON "tags"  ("category_id")[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_shop_id" ON "tags"  ("shop_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160804203640"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1231090217252467950)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'drinks'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'shop_comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'shops'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/" for ::1 at 2016-08-04 16:48:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 95ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:48:36 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (4.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 100ms (Views: 43.2ms | ActiveRecord: 38.6ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:48:38 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (2.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (216.5ms)
+Completed 200 OK in 284ms (Views: 224.0ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 16:48:40 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (1.3ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 60ms (Views: 44.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:48:48 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (2.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.4ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (1.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 86ms (Views: 72.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:49:19 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.8ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (214.6ms)
+Completed 200 OK in 284ms (Views: 260.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 16:49:21 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (2.8ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 68ms (Views: 57.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:49:31 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.9ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 72ms (Views: 63.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/shops/6/shop_comments/new" for ::1 at 2016-08-04 16:49:33 -0400
+Processing by ShopCommentsController#new as HTML
+  Parameters: {"shop_id"=>"6"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (16.0ms)
+  Rendered shop_comments/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 82ms (Views: 58.4ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/shops/6/shop_comments" for ::1 at 2016-08-04 16:49:35 -0400
+Processing by ShopCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VXhVwlfnr6tprao67GocnAF3SCM+5sHH11/1pDUm53akiHEDKKjHKQLv922mEQYRwN1no5uSHX0eege+13D86w==", "shop_comment"=>{"heading"=>"", "body"=>""}, "commit"=>"Create Shop comment", "shop_id"=>"6"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering shop_comments/new.html.erb within layouts/application
+  Rendered shop_comments/_form.html.erb (3.3ms)
+  Rendered shop_comments/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 60ms (Views: 45.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/shops/6/shop_comments" for ::1 at 2016-08-04 16:49:39 -0400
+Processing by ShopCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7kyFEdzetgQwYILYf7EiHO9JKFa3KtQrMmrsNha8Yu8aUjE1PVUT5Hz/ED1Hv3sxAsX51IKGUkIDV/qAoVmx7w==", "shop_comment"=>{"heading"=>"It was Great", "body"=>""}, "commit"=>"Create Shop comment", "shop_id"=>"6"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.8ms)[0m  [1m[32mINSERT INTO "shop_comments" ("heading", "body", "shop_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["heading", "It was Great"], ["body", ""], ["shop_id", 6], ["created_at", 2016-08-04 20:49:39 UTC], ["updated_at", 2016-08-04 20:49:39 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/6
+Completed 302 Found in 72ms (ActiveRecord: 26.8ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:49:39 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (2.1ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 92ms (Views: 82.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:50:13 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 121ms (Views: 99.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/shops/6/shop_comments/1" for ::1 at 2016-08-04 16:50:15 -0400
+Processing by ShopCommentsController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"1"}
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT  "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shop_comments/show.html.erb within layouts/application
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered shop_comments/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 77ms (Views: 65.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:50:18 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.8ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 90ms (Views: 80.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/shops/6/drinks/6" for ::1 at 2016-08-04 16:50:22 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"shop_id"=>"6", "id"=>"6"}
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  [1m[36mShop Load (2.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered drinks/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 96ms (Views: 85.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/shops/6" for ::1 at 2016-08-04 16:50:29 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.3ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 6]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 6]]
+  Rendered shops/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 59ms (Views: 50.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:50:37 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 44ms (Views: 38.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-04 16:50:38 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (26.7ms)
+  Rendered shops/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shops" for ::1 at 2016-08-04 16:50:47 -0400
+Processing by ShopsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z/WIvBqXLh/5EqpiTGI6sbyY8B+susQ5Ao4AKZXFIbL03a9/vIWMqOKf7FPBiZP1Dr3C985AsGpNvyvtfp6TOA==", "shop"=>{"name"=>"Coffee JAms", "address"=>"1900 6th St NW", "img_url"=>"", "shop_type"=>"Hipster"}, "commit"=>"Create Shop"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Coffee JAms"], ["shop_type", "Hipster"], ["created_at", 2016-08-04 20:50:47 UTC], ["updated_at", 2016-08-04 20:50:47 UTC], ["img_url", ""], ["address", "1900 6th St NW"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/7
+Completed 302 Found in 37ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/shops/7" for ::1 at 2016-08-04 16:50:48 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.6ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 71ms (Views: 63.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:50:53 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/shops/7" for ::1 at 2016-08-04 16:50:56 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (2.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (1.0ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 63ms (Views: 53.2ms | ActiveRecord: 4.2ms)
+
+
+Started DELETE "/shops/7" for ::1 at 2016-08-04 16:50:58 -0400
+Processing by ShopsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ltHrLHpWix1/e6NOT8Z1QOBFxlmaaxjefJrlnCyl2B1iz18Im90u/TPkMat3yCxtDckX26/HnrdNp/Mqm0ALHQ==", "id"=>"7"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mShopComment Load (0.7ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::HasManyThroughAssociationNotFoundError (Could not find the association :tags in model Shop):
+  
+app/controllers/shops_controller.rb:45:in `destroy'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.0ms)
+Started GET "/shops/7" for ::1 at 2016-08-04 16:51:17 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  Rendered shops/show.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 107ms (Views: 73.0ms | ActiveRecord: 8.0ms)
+
+
+Started DELETE "/shops/7" for ::1 at 2016-08-04 16:51:19 -0400
+Processing by ShopsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1Kig0/cELTgKdO/xccrMPVbMnkEa9Yj6Q2mk23OmQQMgthT3Fo+I2EbrfRRJxJUQu0BPwy9ZDpNyVLJtxEOSAw==", "id"=>"7"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[36mShopComment Load (0.3ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 7]]
+  [1m[35mSQL (9.4ms)[0m  [1m[31mDELETE FROM "shops" WHERE "shops"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops
+Completed 302 Found in 19ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:51:19 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 16:58:21 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 293ms (Views: 287.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 16:58:21 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:58:23 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 103ms (Views: 60.2ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-04 16:58:24 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 86ms (Views: 57.5ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-04 16:58:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 16:58:27 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:03:28 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 213ms (Views: 154.0ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 17:03:39 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 144ms (Views: 118.7ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/shops/5/edit" for ::1 at 2016-08-04 17:03:41 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/_form.html.erb (25.5ms)
+  Rendered shops/edit.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 71ms (Views: 59.3ms | ActiveRecord: 6.8ms)
+
+
+Started PATCH "/shops/5" for ::1 at 2016-08-04 17:05:28 -0400
+Processing by ShopsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BgeddhpIc16NOSX02NZUb5r6qt5YmW/TjUG/pMq3mbbyGSlS+8PWvsGmtxHg2A1Cd3Z7XG016bq8fKkSfVJKtg==", "shop"=>{"name"=>"Amazing", "address"=>"68 8th Street, Washington, DC", "img_url"=>"/images/shops/shop-5.jpg", "shop_type"=>"Hipster", "all_tags"=>"okay, got it"}, "commit"=>"Update Shop", "id"=>"5"}
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (17.1ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 ORDER BY "tags"."id" ASC LIMIT $2[0m  [["name", "okay"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 22.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column tags.name does not exist
+LINE 1: SELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 ORDER ...
+                                           ^
+: SELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 ORDER BY "tags"."id" ASC LIMIT $2):
+  
+app/models/shop.rb:11:in `block in all_tags='
+app/models/shop.rb:10:in `map'
+app/models/shop.rb:10:in `all_tags='
+app/controllers/shops_controller.rb:36:in `update'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.9ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1231090217252467950);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToTags (20160804210955)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.5ms)[0m  [1m[35mALTER TABLE "tags" ADD "name" character varying[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160804210955"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1231090217252467950)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'drinks'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'locations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'shop_comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'shops'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tags'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started PATCH "/shops/5" for ::1 at 2016-08-04 17:11:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ShopsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BgeddhpIc16NOSX02NZUb5r6qt5YmW/TjUG/pMq3mbbyGSlS+8PWvsGmtxHg2A1Cd3Z7XG016bq8fKkSfVJKtg==", "shop"=>{"name"=>"Amazing", "address"=>"68 8th Street, Washington, DC", "img_url"=>"/images/shops/shop-5.jpg", "shop_type"=>"Hipster", "all_tags"=>"okay, got it"}, "commit"=>"Update Shop", "id"=>"5"}
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 ORDER BY "tags"."id" ASC LIMIT $2[0m  [["name", "okay"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 87ms (ActiveRecord: 5.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Shop must exist, Category must exist):
+  
+app/models/shop.rb:11:in `block in all_tags='
+app/models/shop.rb:10:in `map'
+app/models/shop.rb:10:in `all_tags='
+app/controllers/shops_controller.rb:36:in `update'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.8ms)
+Started PATCH "/shops/5" for ::1 at 2016-08-04 17:12:50 -0400
+Processing by ShopsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BgeddhpIc16NOSX02NZUb5r6qt5YmW/TjUG/pMq3mbbyGSlS+8PWvsGmtxHg2A1Cd3Z7XG016bq8fKkSfVJKtg==", "shop"=>{"name"=>"Amazing", "address"=>"68 8th Street, Washington, DC", "img_url"=>"/images/shops/shop-5.jpg", "shop_type"=>"Hipster", "all_tags"=>""}, "commit"=>"Update Shop", "id"=>"5"}
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'all_tags' for Shop.):
+  
+app/controllers/shops_controller.rb:36:in `update'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.5ms)
+Started GET "/shops/5/edit" for ::1 at 2016-08-04 17:14:39 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (30.3ms)
+  Rendered shops/edit.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `all_tags' for #<Shop:0x007fd1560f81e0>):
+    26:   </p>
+    27: 
+    28:   <!-- <p>
+    29:     <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %>
+    30:   </p> -->
+    31: 
+    32:   <p>
+  
+app/views/shops/_form.html.erb:29:in `block in _app_views_shops__form_html_erb___336721130973919311_70268512280440'
+app/views/shops/_form.html.erb:7:in `_app_views_shops__form_html_erb___336721130973919311_70268512280440'
+app/views/shops/edit.html.erb:3:in `_app_views_shops_edit_html_erb___2855510665385940436_70268534363980'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.8ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.2ms)
+Started GET "/shops/5/edit" for ::1 at 2016-08-04 17:15:12 -0400
+Processing by ShopsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/edit.html.erb within layouts/application
+  Rendered shops/_form.html.erb (6.1ms)
+  Rendered shops/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 97ms (Views: 91.1ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/shops/5" for ::1 at 2016-08-04 17:15:15 -0400
+Processing by ShopsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"deCOf8w+issTgJ9hqtMHBZxg2uizQP1UCESi/vtq71SB/jpbLbUvK18fDYSS3V4ocewLaobsez05ebRITI88VA==", "shop"=>{"name"=>"Amazing", "address"=>"68 8th Street, Washington, DC", "img_url"=>"/images/shops/shop-5.jpg", "shop_type"=>"Hipster"}, "commit"=>"Update Shop", "id"=>"5"}
+  [1m[36mShop Load (3.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/5
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/shops/5" for ::1 at 2016-08-04 17:15:15 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 5]]
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 5]]
+  Rendered shops/show.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 80ms (Views: 60.9ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:15:17 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 44ms (Views: 38.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/shops/new" for ::1 at 2016-08-04 17:15:19 -0400
+Processing by ShopsController#new as HTML
+  Rendering shops/new.html.erb within layouts/application
+  Rendered shops/_form.html.erb (3.7ms)
+  Rendered shops/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/shops" for ::1 at 2016-08-04 17:15:27 -0400
+Processing by ShopsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ibJO+eQQJHesNK9SwCgh9hzN9+8zEG+mBe6x9GgdkXcammk6QgKGwLe56WNNw4iyrujFB1HqG/VK35owg0Yj/Q==", "shop"=>{"name"=>"Amazing Coffee, yo", "address"=>"1900 6th St NW", "img_url"=>"", "shop_type"=>""}, "commit"=>"Create Shop"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "shops" ("name", "shop_type", "created_at", "updated_at", "img_url", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Amazing Coffee, yo"], ["shop_type", ""], ["created_at", 2016-08-04 21:15:27 UTC], ["updated_at", 2016-08-04 21:15:27 UTC], ["img_url", ""], ["address", "1900 6th St NW"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops/8
+Completed 302 Found in 11ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/shops/8" for ::1 at 2016-08-04 17:15:27 -0400
+Processing by ShopsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering shops/show.html.erb within layouts/application
+  [1m[36mShopComment Load (0.5ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 8]]
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 8]]
+  Rendered shops/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/shops/8" for ::1 at 2016-08-04 17:15:36 -0400
+Processing by ShopsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"odqcycaSDwYQG5L7+XmJ53c3gigX1LRX40b20RytqR1VxCjtJxmq5lyEAB7Bd9DKmrtTqiJ4Mj7Se+Bnq0h6HQ==", "id"=>"8"}
+  [1m[36mShop Load (0.9ms)[0m  [1m[34mSELECT  "shops".* FROM "shops" WHERE "shops"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."shop_id" = $1[0m  [["shop_id", 8]]
+  [1m[36mShopComment Load (0.3ms)[0m  [1m[34mSELECT "shop_comments".* FROM "shop_comments" WHERE "shop_comments"."shop_id" = $1[0m  [["shop_id", 8]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."shop_id" = $1[0m  [["shop_id", 8]]
+  [1m[35mSQL (9.3ms)[0m  [1m[31mDELETE FROM "shops" WHERE "shops"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/shops
+Completed 302 Found in 41ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/shops" for ::1 at 2016-08-04 17:15:36 -0400
+Processing by ShopsController#index as HTML
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops"[0m
+  Rendered shops/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
