@@ -1,6 +1,6 @@
 # coffeecheck
 
-Keep track of your favorite places to caffeinate with this Rails App - coffeecheck.
+Keep track of your favorite places to caffeinate with this Rails App.
 
 ## Overview
 
