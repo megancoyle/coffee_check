@@ -9,4 +9,6 @@ The app allows you to:
 * Coffee shops are automatically sorted alphabetically
 * For every coffee shop, you can add, update, delete, and view details as well as coffee drinks
 
-![ScreenShot](coffee-check-screenshot.jpg)
+[![ScreenShot](coffee-check-screenshot.jpg)](https://coffeecheck.herokuapp.com/)
+
+[](https://coffeecheck.herokuapp.com/)
