@@ -11,4 +11,4 @@ The app allows you to:
 
 [![ScreenShot](coffee-check-screenshot.jpg)](https://coffeecheck.herokuapp.com/)
 
-[](https://coffeecheck.herokuapp.com/)
+[View the deployed app](https://coffeecheck.herokuapp.com/)
